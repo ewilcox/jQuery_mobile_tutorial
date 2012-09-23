@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>1st Mobile Site</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<!--
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+		-->
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+			<div data-role="header"><h1>Header Bar p1 test</h1></div>
+			<div data-role="content" data-theme="a"><p>First Content Section - data-theme="a"</p>
+				<ul data-role="listview" data-inset="true" data-theme="b">
+					<li><a href="#page2" data-transition="slide" data-direction="reverse">Page 2</a></li>
+					<li><a href="#page3" data-transition="slide" data-direction="reverse">Page 3</a></li>
+					<li><a href="#page1" data-transition="slide" data-direction="reverse">Page 1</a></li>
+					<li>Page 4
+						<ul>
+							<li><a href="#page1">Haha, no page 4!</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" class="ui-bar" data-theme="e">
+				<label>Theme listed - links to:</label>
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#page2" data-role="button" data-transition="pop" data-direction="reverse" data-theme="a">'A' - p2</a>
+					<a href="#page3" data-role="button" data-transition="slide" data-direction="reverse" data-theme="b">'B' - p3</a>
+					<a href="#page2" data-role="button" data-transition="fade" data-direction="reverse" data-theme="c">'C' - p2</a>
+					<a href="#page3" data-role="button" data-transition="flip" data-direction="reverse" data-theme="d">'D' - p3</a>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="page2" data-theme="e">
+			<div data-role="header"><h1>Page 2</h1></div>
+			<div data-role="content">
+				<form action="forms-results.php" method="get">
+					<fieldset>
+						<div data-role="fieldcontain">
+							<label for="select-options" class="select">Choose an Option:</label>
+							<select name="select-options" id="select-options">
+								<option value="option1">Option 1</option>
+								<option value="option2">Option 2</option>
+								<option value="option3">Option 3</option>
+							</select>
+						</div>
+						<button type="submit">Submit</button>
+					</fieldset>
+				</form>
+			</div>
+			<div data-role="footer"><h4>Footer p2</h4></div>
+		</div>
+		<div data-role="page" id="page3" data-theme="a">
+			<div data-role="header"><h1>Page 3</h1></div>
+			<div data-role="content">
+				<h3>Content Here - Page 3</h3>
+				<p>Options are on page 2!</p>
+				<p>This page has data-theme="a"</p>
+				<form>
+					<label for="slider-0">Pick your page (1-100 not available)</label>
+					<input type="range" name="slider" id="slider-0" value="50" min="0" max="100" />
+				</form>
+				<a href="#page1" data-role="button" data-icon="star" data-theme="f">Go Home</a>
+			</div>
+			<div data-role="footer"><h4>Footer p3</h4></div>
+		</div>
+	</body>
+</html>
